@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  name: "eggshell-blue"
+  color: "#a3ccc9"
+  pantone: "19-5230"
+  year: 2021
+
+two:
+  id: 2
+  name: loganberry
+  color: "#5a4769"
+  pantone: "19-3622"
+  year: 2019

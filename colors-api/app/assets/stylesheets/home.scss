@@ -1,0 +1,54 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#main-header {
+  background:#3672ff;
+  color:white;
+  font-weight:bold;
+}
+
+
+#main-footer {
+  background:#3672ff;
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 30px;
+}
+
+
+.color-card {
+  background:green;
+  border-radius:10px;
+  margin-bottom:1vh;
+  height:27vh;
+  padding:7px 14px;
+
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .color-middle {
+    text-align:center;
+
+    .color-hex {
+      font-size:16px;
+      font-weight:bold;
+    }
+
+    .color-actions {
+      font-size:24px;
+    }
+  }
+
+  .color-pantone {
+    text-align:right;
+  }
+}

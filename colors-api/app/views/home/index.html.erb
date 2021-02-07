@@ -1,0 +1,100 @@
+
+<div id="app">
+
+  <header id="main-header" class="text-center">
+    <h1>Colores</h1>
+  </header>
+
+  <section id="color-wrapper">
+
+    <div class="row">
+
+      <color-card-item
+        v-for="color in colors"
+        v-bind:key="color.id"
+        v-bind:color="color"
+      ></color-card-item>
+
+    </div>
+
+  </section>
+
+
+  <footer id="main-footer">
+    <div class="row">
+
+      <div class="col-md-4">
+
+        <button type="button" class="btn btn-dark" :disabled="page <= 1" @click="click_button_prev" >
+          <i class="fas fa-angle-left"></i> Anterior
+        </button>
+
+      </div>
+
+      <div class="col-md-4 text-center">
+
+        <button type="button" class="btn btn-success"  @click="click_button_add_color" >
+          <i class="fas fa-plus-square"></i> Agregar Color
+        </button>
+      </div>
+
+      <div class="col-md-4 text-right">
+        <button type="button" class="btn btn-dark" :disabled="colors.length < 9" @click="click_button_next" >
+          Siguiente <i class="fas fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </footer>
+
+  <div id="edit-color-dialog"  v-show="b_show_edit_form" >
+
+  </div>
+
+  <form id="edit-color-form"  v-show="b_show_edit_form">
+    <input type="hidden" name="id" v-model="edit_color.id">
+    Name:
+    <input type="text" name="name" v-model="edit_color.name">
+    <br>
+    Hexadecimal Color:
+    <input type="text" name="color" v-model="edit_color.color" >
+    <br>
+    Pantone:
+    <input type="text" name="pantone" v-model="edit_color.pantone">
+    <br>
+    Year:<br>
+    <input type="text" name="year" v-model="edit_color.year">
+    <br>
+    <button @click="click_button_save_form" >Save</button>
+
+  </form>
+
+
+
+  <div id="add-color-dialog"  v-show="b_show_add_form" >
+
+  </div>
+
+  <form id="add-color-form"  v-show="b_show_add_form">
+    Name:
+    <input type="text" name="name" >
+    <br>
+    Hexadecimal Color:
+    <input type="text" name="color"  >
+    <br>
+    Pantone:
+    <input type="text" name="pantone">
+    <br>
+    Year:<br>
+    <input type="text" name="year">
+    <br>
+    <button @click="click_button_save_add_form" >Save</button>
+
+  </form>
+
+
+
+
+</div>
+
+<script src="/js/colors/home_index_vue.js"></script>
